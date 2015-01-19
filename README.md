@@ -13,14 +13,14 @@ After setting up the raspberry pi itself, the cables need to be connected in the
 |:------------:|:-----------:|
 |    1 (GND)   |   6 (GND)   |
 |    2 (+5V)   |   2 (+5V)   |
-| 3 (Kontrast) |   6 (GND)   |
+| 3 (contrast) |   6 (GND)   |
 |    4 (RS)    |  26 (GPIO7) |
 |    5 (R/W)   |   6 (GND)   |
 |     6 (E)    |  24 (GPIO8) |
-| 11 (Daten 4) | 22 (GPIO25) |
-| 12 (Daten 5) | 18 (GPIO24) |
-| 13 (Daten 6) | 16 (GPIO23) |
-| 14 (Daten 7) | 12 (GPIO18) |
+| 11 (Data 4)  | 22 (GPIO25) |
+| 12 (Data 5)  | 18 (GPIO24) |
+| 13 (Data 6)  | 16 (GPIO23) |
+| 14 (Data 7)  | 12 (GPIO18) |
 | 15 (LED +5V) |   2 (+5V)   |
 | 16 (LED GND) |   6 (GND)   |
 
