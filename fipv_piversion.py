@@ -18,9 +18,9 @@ import RPi.GPIO as GPIO
 ##########################################
 #
 #
-client_id = 'YOUR CLIENT ID'
-client_secret = 'YOUR CLIENT SECRET'
-username="YOUR USERNAME"
+client_id = '6d07fdefe45cf82'
+client_secret = '18ee4930d31fd5dd6824416eaf53d88b87a184aa'
+username="sbasht"
 DISPLAY_WIDTH = 24 #How many chars fit into one line of the display
 #
 #
@@ -141,7 +141,7 @@ def main():
 
 	
 		lcd_byte(DISPLAY_LINE_1, DISPLAY_CMD)
-		lcd_string('FIPV:')
+		lcd_string('        FIPV:')
 	
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
 		lcd_string('FakeInternetPointViewer')
@@ -150,7 +150,7 @@ def main():
 		lcd_byte(DISPLAY_LINE_1, DISPLAY_CMD)
 		lcd_string('Username: ' + username)
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
-		lcd_string('Rep: ', get_reputation_status(username)[0], " (" , get_reputation_status(username)[1], ")")
+		lcd_string('Rep: '+ str(get_reputation_status(username)[0])+ " (" + str(get_reputation_status(username)[1])+ ")")
 
 		time.sleep(sleeptime)
 
@@ -159,7 +159,7 @@ def main():
 		lcd_string('Latest submission:')
 
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
-		lcd_string(get_gallery_votecount(get_latest_submission_id(username)), " points")
+		lcd_string(get_gallery_votecount(str(get_latest_submission_id(username)))+ " points")
 
 		time.sleep(sleeptime)
 	
@@ -167,7 +167,7 @@ def main():
 		lcd_string('Best submission:')
 
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
-		lcd_string(get_gallery_votecount(get_best_submission_id(username)), " points")
+		lcd_string(get_gallery_votecount(str(get_best_submission_id(username)))+ " points")
 
 		time.sleep(sleeptime)
   
@@ -175,7 +175,7 @@ def main():
 		lcd_string('Latest comment:')
 
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
-		lcd_string(get_latest_comment(username), " points")
+		lcd_string(str(get_latest_comment(username))+ " points")
 
 		time.sleep(sleeptime)
 
@@ -183,7 +183,7 @@ def main():
 		lcd_string('Best comment:')
 
 		lcd_byte(DISPLAY_LINE_2, DISPLAY_CMD)
-		lcd_string(get_highest_rated_comment(username), " points")
+		lcd_string(str(get_highest_rated_comment(username))+ " points")
 
 		time.sleep(sleeptime)
 
