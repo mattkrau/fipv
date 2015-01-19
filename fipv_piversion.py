@@ -35,6 +35,8 @@ def get_latest_submission_id(username):
     submissions = client.get_account_submissions(username, page=0)
     latest = submissions[0].link
     galleryid = latest.split("/")[3].split(".")[0]
+    if galleryid == "a":
+        galleryid = latest.split("/")[4].split(".")[0]
     return galleryid
 
 def get_best_submission_id(username):
